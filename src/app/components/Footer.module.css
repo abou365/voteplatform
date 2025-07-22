@@ -1,0 +1,146 @@
+.footer {
+  background: #232a32;
+  color: #a3aab7;
+  padding: 3rem 0 1.5rem 0;
+  font-size: 1rem;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.footerTitle {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.footerDesc {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.socials {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.footerLinks, .footerResources, .footerContact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  text-align: left;
+}
+
+.footerLinks a, .footerResources a {
+  color: #a3aab7;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footerLinks a:hover, .footerResources a:hover {
+  color: #fff;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.newsletterLabel {
+  color: #fff;
+  font-weight: 500;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.newsletterForm {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.newsletterInput {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem 0 0 0.4rem;
+  border: 1px solid #3a4047;
+  background: #232a32;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.newsletterBtn {
+  background: #2563eb;
+  border: none;
+  border-radius: 0 0.4rem 0.4rem 0;
+  padding: 0.6rem 1.1rem;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+.newsletterBtn:hover {
+  background: #1d4ed8;
+}
+
+.footerBottom {
+  border-top: 1px solid #31363d;
+  margin-top: 2.5rem;
+  padding-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  color: #a3aab7;
+  font-size: 0.95rem;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .footerContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .socials {
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    justify-items: center;
+    text-align: center;
+  }
+  .footerTitle, .footerDesc, .footerLinks, .footerResources, .footerContact {
+    text-align: center;
+    align-items: center;
+  }
+  .socials {
+    justify-content: center;
+  }
+  .footerBottom {
+    font-size: 0.85rem;
+    align-items: center;
+    text-align: center;
+  }
+} 

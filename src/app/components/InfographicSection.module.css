@@ -1,0 +1,108 @@
+.infographicSection {
+  width: 100%;
+  padding: 64px 0 48px 0;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.infographicTitle {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #23272f;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.5px;
+}
+.infographicGrid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+}
+@media (max-width: 900px) {
+  .infographicGrid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+}
+.infographicStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  min-width: 220px;
+}
+.infographicStepCenter {
+  transform: scale(1.13);
+  z-index: 2;
+}
+.infographicCircle {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(30,41,59,0.13);
+  margin-bottom: 1.2rem;
+  font-size: 2.2rem;
+  position: relative;
+}
+.circleViolet { background: #7c3aed; color: #fff; }
+.circleBlue { background: #06b6d4; color: #fff; }
+.circlePink { background: #ec4899; color: #fff; }
+.infographicCard {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px rgba(30,41,59,0.09);
+  padding: 1.3rem 1.2rem 1.1rem 1.2rem;
+  min-width: 200px;
+  max-width: 260px;
+  text-align: center;
+  margin-top: -16px;
+}
+.infographicCardTitle {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #23272f;
+  margin-bottom: 0.5rem;
+}
+.infographicCardText {
+  color: #6b7280;
+  font-size: 0.98rem;
+  font-weight: 400;
+}
+/* Lignes de connexion décoratives */
+.infographicLine {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+@media (max-width: 900px) {
+  .infographicLine { display: none; }
+}
+.fadeIn {
+  opacity: 0;
+  animation: fadeInUp 0.7s cubic-bezier(.4,0,.2,1) forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+} 

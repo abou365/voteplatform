@@ -1,0 +1,175 @@
+/* =========================
+   Fond général de la page d'authentification
+   ========================= */
+.authBg {
+  min-height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  background: linear-gradient(120deg, #f1f5ff 0%, #f9f6fb 100%); /* Dégradé doux */
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   Carte principale d'authentification
+   ========================= */
+.authContainer {
+  max-width: 700px;      /* Largeur maximale de la carte */
+  width: 100%;           /* Prend toute la largeur possible */
+  min-width: 320px;      /* Largeur minimale pour mobile */
+  margin: 4rem auto;     /* Centrage vertical et horizontal */
+  background: #fff;      /* Fond blanc */
+  border-radius: 1.2rem; /* Coins arrondis */
+  box-shadow: 0 4px 24px rgba(30,41,59,0.08); /* Ombre douce */
+  padding: 2.5rem 2rem 2rem 2rem; /* Espacement interne */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   Icône principale en haut du formulaire
+   ========================= */
+.authIconWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+.authIcon {
+  font-size: 4rem;         /* Taille de l'icône */
+  color: #2563eb;          /* Couleur principale */
+  background: #e0e7ff;     /* Fond bleu clair */
+  border-radius: 50%;      /* Cercle */
+  padding: 1.1rem;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+}
+
+/* =========================
+   Titres et sous-titres
+   ========================= */
+.authTitle {
+  font-size: 2rem;         /* Taille du titre */
+  font-weight: 800;        /* Titre très gras */
+  color: #1a2233;          /* Couleur foncée */
+  text-align: center;
+}
+.authSubtitle {
+  color: #64748b;          /* Gris doux */
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+
+/* =========================
+   Formulaire d'authentification
+   ========================= */
+.authForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;             /* Espacement vertical entre les champs */
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Label des champs */
+.authLabel {
+  font-weight: 700;        /* Gras */
+  color: #1a2233;
+  margin-bottom: 0.15rem;  /* Espace réduit entre label et input */
+  font-size: 1.05rem;
+  text-align: left;
+  width: 100%;
+}
+
+/* Wrapper pour input + icône */
+.authInputWrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Champ de saisie */
+.authInput {
+  width: 100%;
+  height: 48px;
+  padding: 0 1.1rem 0 2.7rem; /* Espace à gauche pour l'icône */
+  border-radius: 0.7rem;
+  border: 1.5px solid #e5e7eb;
+  background: #f8fafc;
+  font-size: 1.08rem;
+  color: #18181b;
+  outline: none;
+  transition: border 0.18s;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+.authInput:focus {
+  border: 1.5px solid #2563eb; /* Bordure bleue au focus */
+  background: #fff;
+}
+
+/* Icône à l'intérieur du champ */
+.inputIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 1.2rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Bouton œil pour afficher/masquer le mot de passe */
+.eyeBtn {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
+}
+
+/* Bouton principal du formulaire */
+.authButton {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.08rem;
+  font-weight: 700;
+  padding: 1rem 0;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+  transition: background 0.18s;
+}
+.authButton:hover {
+  background: #1d4ed8;
+}
+
+/* Liens sous le formulaire */
+.authLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  align-items: center;
+}
+.authLinks a {
+  color: #2563eb;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.18s;
+}
+.authLinks a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}

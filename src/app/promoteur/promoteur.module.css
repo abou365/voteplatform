@@ -1,0 +1,216 @@
+/* Dashboard Promoteur - Styles détaillés */
+
+.dashboardContainer {
+  background: #f9fafb;
+  min-height: 100vh;
+  padding: 2.5rem 0 0 0;
+}
+
+.dashboardCardRow {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.dashboardCard {
+  flex: 1;
+  min-width: 220px;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.dashboardCardIcon {
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+  opacity: 0.85;
+}
+
+.dashboardCardTitle {
+  color: #64748b;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.dashboardCardValue {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #18181b;
+  margin-bottom: 0.2rem;
+}
+
+.dashboardCardSub {
+  color: #22c55e;
+  font-size: 1.01rem;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.dashboardCardDesc {
+  color: #64748b;
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.dashboardCardOrange {
+  background: #fff7ed;
+}
+.dashboardCardGreen {
+  background: #f0fdf4;
+}
+.dashboardCardPurple {
+  background: #f5f3ff;
+}
+
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.2rem;
+  gap: 1.5rem;
+}
+
+.dashboardTitle {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #18181b;
+  margin-bottom: 0.2rem;
+}
+.dashboardSubtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.dashboardActions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.dashboardExportBtn {
+  background: #22c55e;
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(34,197,94,0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: background 0.18s;
+}
+.dashboardExportBtn:hover {
+  background: #16a34a;
+}
+
+.dashboardBadge {
+  background: #f0fdf4;
+  color: #22c55e;
+  border-radius: 1.2rem;
+  font-weight: 700;
+  font-size: 1.01rem;
+  padding: 0.5rem 1.2rem;
+  margin-left: 0.7rem;
+  display: inline-block;
+}
+
+.dashboardTabs {
+  display: flex;
+  gap: 2.2rem;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+}
+.dashboardTab {
+  color: #64748b;
+  font-weight: 700;
+  font-size: 1.08rem;
+  padding: 0.7rem 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 2.5px solid transparent;
+  transition: color 0.18s, border-color 0.18s;
+}
+.dashboardTabActive {
+  color: #2563eb;
+  border-bottom: 2.5px solid #2563eb;
+}
+
+.dashboardChartsRow {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.2rem;
+  flex-wrap: wrap;
+}
+.dashboardChartBox {
+  flex: 1;
+  min-width: 320px;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dashboardStatsCatRow {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.dashboardStatsCatCard {
+  flex: 1;
+  min-width: 220px;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+  padding: 1.2rem 1.2rem 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.dashboardStatsCatTitle {
+  color: #18181b;
+  font-weight: 700;
+  font-size: 1.08rem;
+  margin-bottom: 0.2rem;
+}
+.dashboardStatsCatVotes {
+  color: #2563eb;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+}
+.dashboardStatsCatParticipation {
+  color: #64748b;
+  font-size: 0.98rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.dashboardStatsCatBar {
+  width: 100%;
+  height: 6px;
+  background: #e0e7ff;
+  border-radius: 4px;
+  margin-top: 0.2rem;
+  margin-bottom: 0.1rem;
+  overflow: hidden;
+}
+.dashboardStatsCatBarFill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 4px;
+} 

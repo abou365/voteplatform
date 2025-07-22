@@ -1,0 +1,430 @@
+.page {
+  background: #f9fafb;
+  min-height: 100vh;
+  padding: 2.5rem 2rem 3rem 2rem;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #1a2233;
+  margin-bottom: 0.2rem;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 2.2rem;
+  font-size: 1.18rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.2rem;
+}
+
+.shareBtn {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.8rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+  transition: background 0.18s, transform 0.18s;
+}
+.shareBtn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px) scale(1.04);
+}
+.exportBtn {
+  background: #22c55e;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.8rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(34,197,94,0.08);
+  transition: background 0.18s, transform 0.18s;
+}
+.exportBtn:hover {
+  background: #16a34a;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.statsWrapper {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.statsRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.2rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+.statCard {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: none;
+  width: 100%;
+}
+.statIcon {
+  font-size: 1.5rem;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.statIcon.votes { background: #e0f2fe; color: #0ea5e9; }
+.statIcon.candidats { background: #f3e8ff; color: #a855f7; }
+.statIcon.categories { background: #dcfce7; color: #22c55e; }
+
+.statInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.statLabel {
+  color: #64748b;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.statValue {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.filterBlock {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 2.5rem;
+  display: block; /* revenir à une disposition en bloc */
+}
+.filterLabel {
+  font-weight: 700;
+  color: #1a2233;
+  font-size: 1.18rem;
+  margin-bottom: 1rem; /* rétablir la marge en bas */
+  flex-shrink: 0;
+}
+.filterTabs {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+.tab, .tabActive {
+  border: none;
+  border-radius: 2rem;
+  padding: 0.9rem 2.1rem;
+  font-size: 1.08rem;
+  font-weight: 700;
+  background: #e5e7eb;
+  color: #475569;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: none;
+}
+.tabActive {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 700;
+}
+.tab:hover:not(.tabActive) {
+  background: #d1d5db;
+  color: #2563eb;
+}
+
+.podiumBlock {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px rgba(30,41,59,0.07);
+  padding: 2.7rem 2.2rem 2.7rem 2.2rem;
+  margin-bottom: 2.5rem;
+}
+.podiumTitle {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1a2233;
+  margin-bottom: 2.2rem;
+  letter-spacing: -0.5px;
+}
+.podiumRow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2.2rem;
+}
+.podiumItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.podiumPlace1 {
+  z-index: 2;
+  margin-bottom: 1.5rem;
+}
+.podiumPlace2 {
+  z-index: 1;
+  margin-right: 0.5rem;
+}
+.podiumPlace3 {
+  z-index: 1;
+  margin-left: 0.5rem;
+}
+.podiumAvatarWrap {
+  position: relative;
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.podiumPlace1 .podiumAvatar {
+  width: 120px;
+  height: 120px;
+  border: 5px solid #facc15;
+  box-shadow: 0 4px 24px 0 #fde04744;
+}
+.podiumPlace2 .podiumAvatar {
+  width: 90px;
+  height: 90px;
+  border: 4px solid #cbd5e1;
+}
+.podiumPlace3 .podiumAvatar {
+  width: 90px;
+  height: 90px;
+  border: 4px solid #fb923c;
+}
+.podiumAvatar {
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+}
+.podiumBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%,-50%);
+  background: #e2e8f0;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  border: 2.5px solid #fff;
+  width: 2.1rem;
+  height: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(30,41,59,0.07);
+  z-index: 2;
+}
+.podiumBadge1 {
+  background: #facc15;
+  color: #fff;
+}
+.podiumPlace3 .podiumBadge {
+  background: #fb923c;
+  color: #fff;
+}
+.podiumCrown {
+  position: absolute;
+  top: -22px;
+  right: -22px;
+  font-size: 2rem;
+  color: #facc15;
+  z-index: 3;
+}
+.podiumName {
+  font-weight: 700;
+  color: #1a2233;
+  font-size: 1.08rem;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+.podiumScoreCard {
+  margin-top: 0.7rem;
+  border-radius: 0.7rem;
+  padding: 0.7rem 2.2rem 0.5rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 90px;
+}
+.podiumScore1 {
+  background: #fef9c3;
+}
+.podiumScore2 {
+  background: #f1f5f9;
+}
+.podiumScore3 {
+  background: #ffedd5;
+}
+.podiumScore {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+.podiumScore1 .podiumScore {
+  color: #eab308;
+}
+.podiumScore2 .podiumScore {
+  color: #64748b;
+}
+.podiumScore3 .podiumScore {
+  color: #fb923c;
+}
+.podiumVotesLabel {
+  font-size: 1rem;
+  color: #94a3b8;
+  font-weight: 500;
+  margin-top: -0.2rem;
+}
+
+.graphsRow {
+  display: flex;
+  gap: 2.2rem;
+  margin-bottom: 2.5rem;
+}
+.graphCard {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px rgba(30,41,59,0.07);
+  padding: 2.2rem 2.2rem 1.7rem 2.2rem;
+  flex: 1 1 0;
+  min-width: 340px;
+  display: flex;
+  flex-direction: column;
+}
+.graphTitle {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #1a2233;
+  margin-bottom: 1.2rem;
+}
+
+.classementBlock {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px rgba(30,41,59,0.07);
+  padding: 2.2rem 2.2rem 1.7rem 2.2rem;
+}
+.classementTitle {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #1a2233;
+  margin-bottom: 1.5rem;
+}
+.classementList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.classementItem {
+  display: flex;
+  align-items: center;
+  background: #f7f9fa;
+  border-radius: 1.1rem;
+  padding: 1.1rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(30,41,59,0.04);
+  gap: 1.2rem;
+  position: relative;
+}
+.classementRank {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  background: #2563eb;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+.classementItem:nth-child(1) .classementRank {
+  background: #facc15;
+  color: #1a2233;
+}
+.classementItem:nth-child(2) .classementRank {
+  background: #a3aab7;
+  color: #1a2233;
+}
+.classementItem:nth-child(3) .classementRank {
+  background: #fb923c;
+  color: #1a2233;
+}
+.classementAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid #fff;
+  box-shadow: 0 2px 8px rgba(30,41,59,0.07);
+  flex-shrink: 0;
+}
+.classementInfo {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.classementName {
+  font-weight: 700;
+  color: #1a2233;
+  font-size: 1.08rem;
+}
+.classementCat {
+  color: #6366f1;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+.classementVotes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1.08rem;
+  color: #1a2233;
+  font-weight: 700;
+  min-width: 90px;
+}
+.classementVotes span {
+  color: #6b7280;
+  font-size: 0.98rem;
+  font-weight: 500;
+}
