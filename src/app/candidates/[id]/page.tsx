@@ -17,7 +17,7 @@ const candidate = {
   categoryId: 'meilleur-artiste',
 };
 
-export default function Page({ params }: { params: { id: string } }) {
+export default function CandidatePage({ params }: { params: { id: string } }) {
   const voteUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/candidates/${params.id}`;
 
   return (
@@ -57,4 +57,4 @@ export default function Page({ params }: { params: { id: string } }) {
       <Footer />
     </>
   );
-}
+} 
