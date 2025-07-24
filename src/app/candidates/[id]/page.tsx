@@ -6,17 +6,16 @@ import ShareSection from '@/app/components/ShareSection';
 import styles from './candidate.module.css';
 import ScrollEffect from '@/app/components/ScrollEffect';
 
-// TODO: Fetch real candidate data based on ID
 const candidate = {
   name: 'Emma Rodriguez',
   votes: 267,
   bio: 'Athlète professionnelle spécialisée dans le tennis.',
   image: '/img-slide1.jpeg',
-  eventId: 'festival-arts-2024', // identifiant fictif de l'événement
-  categoryId: 'meilleur-artiste', // identifiant fictif de la catégorie
+  eventId: 'festival-arts-2024',
+  categoryId: 'meilleur-artiste',
 };
 
-export default function CandidatePage({ params }: { params: { id: string } }) {
+export default function Page({ params }: { params: { id: string } }) {
   const voteUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/candidates/${params.id}`;
 
   return (
