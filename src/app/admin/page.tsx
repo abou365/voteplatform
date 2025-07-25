@@ -6,6 +6,7 @@ import { FaTrophy, FaCalendarAlt, FaChartLine } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line, CartesianGrid } from "recharts";
 import { useState } from "react";
+import PageHeader from "@/app/components/PageHeader";
 
 const stats = [
   {
@@ -77,6 +78,11 @@ export default function AdminDashboard() {
   return (
     <div className={styles.dashboardContainer}>
       <Header />
+      <PageHeader
+        title="Dashboard Admin"
+        subtitle="Vue d'ensemble de la plateforme, statistiques et gestion."
+        image="/img-slide2.jpeg"
+      />
       <main style={{ maxWidth: 1200, margin: '0 auto', padding: '2.5rem 0 2rem 0' }}>
         {/* Header + actions */}
         <div className={styles.dashboardHeader}>

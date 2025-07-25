@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./HeroSlider.module.css";
+import { useRouter } from "next/navigation";
 
 const slides = [
   {
@@ -45,6 +46,7 @@ const slides = [
 export default function HeroSlider() {
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const router = useRouter();
 
   const next = () => setIndex(i => (i === slides.length - 1 ? 0 : i + 1));
   const prev = () => setIndex(i => (i === 0 ? slides.length - 1 : i - 1));
@@ -80,10 +82,16 @@ export default function HeroSlider() {
         <h1 className={`${styles.heroTitle} ${styles.heroFadeIn}`}>{slides[index].title}</h1>
         <p className={`${styles.heroSubtitle} ${styles.heroFadeIn}`}>{slides[index].subtitle}</p>
         <div className={`${styles.heroActions} ${styles.heroFadeIn}`}>
-          <button className={`${styles.heroBtn} ${styles.heroBtnPrimary}`}>
+          <button
+            className={`${styles.heroBtn} ${styles.heroBtnPrimary}`}
+            onClick={() => router.push("/events")}
+          >
             {slides[index].btn1} <span style={{marginLeft:8}}>&#8594;</span>
           </button>
-          <button className={`${styles.heroBtn} ${styles.heroBtnOutline}`}>
+          <button
+            className={`${styles.heroBtn} ${styles.heroBtnOutline}`}
+            onClick={() => router.push("/auth/login")}
+          >
             {slides[index].btn2} <span style={{marginLeft:8}}>&#9654;</span>
           </button>
         </div>

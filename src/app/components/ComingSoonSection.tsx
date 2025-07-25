@@ -23,7 +23,7 @@ export default function ComingSoonSection() {
         {/* Mockup avec halo */}
         <div className={styles.comingSoonMockupWrap}>
           <div className={styles.comingSoonMockupHalo}></div>
-          <Image src="/Capture d’écran voteplatform.png" alt="Aperçu application" width={320} height={600} className={styles.comingSoonMockup} />
+          <Image src="/capture-ecran-voteplatform.png" alt="Aperçu application" width={320} height={600} className={styles.comingSoonMockup} />
         </div>
       </div>
     </section>

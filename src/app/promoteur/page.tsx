@@ -6,6 +6,7 @@ import { FaCalendarAlt, FaChartLine, FaUserFriends } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line, CartesianGrid } from "recharts";
 import { useState } from "react";
+import PageHeader from "@/app/components/PageHeader";
 
 const stats = [
   {
@@ -59,6 +60,11 @@ export default function PromoteurDashboard() {
   return (
     <div className={styles.dashboardContainer}>
       <Header />
+      <PageHeader
+        title="Espace Promoteur"
+        subtitle="Gérez vos événements, suivez les statistiques et l'engagement."
+        image="/img-slide3.jpeg"
+      />
       <main style={{ maxWidth: 1200, margin: '0 auto', padding: '2.5rem 0 2rem 0' }}>
         {/* Header + actions */}
         <div className={styles.dashboardHeader}>

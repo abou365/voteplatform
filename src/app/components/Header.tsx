@@ -42,10 +42,9 @@ export default function Header() {
         </button>
         {/* Navigation centrée (desktop) */}
         <nav className={styles.centerNav}>
-          <a href="#" className="px-4 py-2 rounded-lg text-base font-medium text-blue-700 bg-blue-50">Accueil</a>
-          <a href="#" className="px-4 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-100">Catégories</a>
-          <a href="#" className="px-4 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-100">Événements</a>
-          <a href="#" className="px-4 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-100">Résultats</a>
+          <Link href="/" legacyBehavior><a className="px-4 py-2 rounded-lg text-base font-medium text-blue-700 bg-blue-50">Accueil</a></Link>
+          <Link href="/events" legacyBehavior><a className="px-4 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-100">Événements</a></Link>
+          <Link href="/results" legacyBehavior><a className="px-4 py-2 rounded-lg text-base font-medium text-gray-700 hover:bg-gray-100">Résultats</a></Link>
         </nav>
         {/* Actions à droite (desktop) */}
         <div className={styles.rightActions}>
@@ -72,10 +71,10 @@ export default function Header() {
         {dropdownOpen && (
           <div ref={dropdownRef} className={styles.dropdownMenu} role="menu" aria-label="Menu principal">
             <nav className={styles.dropdownNav}>
-              <a href="#" onClick={() => setDropdownOpen(false)}>Accueil</a>
-              <a href="#" onClick={() => setDropdownOpen(false)}>Catégories</a>
-              <a href="#" onClick={() => setDropdownOpen(false)}>Événements</a>
-              <a href="#" onClick={() => setDropdownOpen(false)}>Résultats</a>
+              <Link href="/" legacyBehavior><a onClick={() => setDropdownOpen(false)}>Accueil</a></Link>
+              <Link href="/events/categories" legacyBehavior><a onClick={() => setDropdownOpen(false)}>Catégories</a></Link>
+              <Link href="/events" legacyBehavior><a onClick={() => setDropdownOpen(false)}>Événements</a></Link>
+              <Link href="/results" legacyBehavior><a onClick={() => setDropdownOpen(false)}>Résultats</a></Link>
             </nav>
             <div className={styles.dropdownActions}>
               {!isLoggedIn ? (

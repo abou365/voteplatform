@@ -1,0 +1,156 @@
+.authBg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/img-slide1.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
+.glassCard {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.13);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  padding: 38px 30px 32px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+  color: white;
+  animation: fadeInUp 0.6s ease-out;
+  width: 100%;
+  max-width: 410px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.glassCard h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.7rem;
+  letter-spacing: -1px;
+  text-align: center;
+}
+.glassCard p {
+  font-size: 1rem;
+  margin-bottom: 1.7rem;
+  opacity: 0.85;
+  text-align: center;
+}
+.glassCard label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+.glassCard .inputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.18);
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  padding: 0 0.5rem;
+  border: 1.5px solid rgba(255,255,255,0.18);
+  transition: border 0.18s;
+}
+.glassCard .inputWrap:focus-within {
+  border: 1.5px solid #fff;
+  background: rgba(255,255,255,0.28);
+}
+.glassCard .inputIcon {
+  color: #fff;
+  opacity: 0.7;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+.glassCard .eyeBtn {
+  position: absolute;
+  right: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+.glassCard input {
+  width: 100%;
+  padding: 12px 0;
+  padding-right: 2.2rem;
+  background: transparent !important;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  color: #fff;
+  outline: none;
+  box-shadow: none;
+}
+.glassCard input::placeholder {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.05rem;
+}
+.glassCard button {
+  width: 100%;
+  background: linear-gradient(90deg,#2563eb 60%,#8b5cf6 100%);
+  color: white;
+  padding: 13px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.13rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.08);
+  transition: background 0.18s;
+}
+.glassCard button:hover {
+  background: linear-gradient(90deg,#1d4ed8 60%,#7c3aed 100%);
+}
+.glassCard .footer {
+  margin-top: 2.2rem;
+  text-align: center;
+  font-size: 1rem;
+  opacity: 0.92;
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+.glassCard .footer a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.glassCard .footer a:hover {
+  opacity: 0.8;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 600px) {
+  .glassCard {
+    padding: 18px 6vw 18px 6vw;
+    max-width: 98vw;
+  }
+} 

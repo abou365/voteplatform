@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
-import styles from './results.module.css';
+import styles from './[event]/results.module.css';
 import { FaUserFriends, FaChartBar, FaTrophy, FaShareAlt, FaFileCsv } from 'react-icons/fa';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 import Image from 'next/image';
@@ -50,8 +50,8 @@ export default function ResultsPage() {
     <>
       <Header />
       <PageHeader
-        title="Résultats de l'événement"
-        subtitle="Classements, podiums et statistiques détaillées."
+        title="Résultats généraux"
+        subtitle="Classements, podiums et statistiques globales."
         image="/img-slide2.jpeg"
       />
       <div className={styles.page}>
@@ -186,4 +186,4 @@ export default function ResultsPage() {
       <Footer />
     </>
   );
-}
+} 
