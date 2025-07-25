@@ -7,6 +7,7 @@ import { MdDownload } from "react-icons/md";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, Line, CartesianGrid } from "recharts";
 import { useState } from "react";
 import PageHeader from "@/app/components/PageHeader";
+import { useRouter } from "next/navigation";
 
 const stats = [
   {
@@ -57,6 +58,7 @@ const tabs = [
 
 export default function PromoteurDashboard() {
   const [activeTab, setActiveTab] = useState(0);
+  const router = useRouter();
   return (
     <div className={styles.dashboardContainer}>
       <Header />
@@ -149,6 +151,40 @@ export default function PromoteurDashboard() {
               ))}
             </div>
           </>
+        )}
+        {activeTab === 1 && (
+          <div style={{marginTop: 32}}>
+            <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:20}}>
+              <h3 style={{fontSize:'1.35rem', fontWeight:800}}>Mes Événements</h3>
+              <button className={styles.dashboardExportBtn} onClick={() => router.push('/promoteur/evenements')}>+ Créer un événement</button>
+            </div>
+            <table className={styles.adminTable} style={{width:'100%', background:'#fff', borderRadius:12, boxShadow:'0 2px 12px rgba(30,41,59,0.07)', overflow:'hidden'}}>
+              <thead>
+                <tr style={{background:'#f3f4f6'}}>
+                  <th>Nom</th>
+                  <th>Votes</th>
+                  <th>Participants</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Gala Musique</td><td>320</td><td>120</td><td><button style={{color:'#2563eb',background:'none',border:'none',cursor:'pointer'}} onClick={() => router.push('/promoteur/evenements')}>Voir</button></td></tr>
+                <tr><td>Challenge Innovation</td><td>210</td><td>80</td><td><button style={{color:'#2563eb',background:'none',border:'none',cursor:'pointer'}} onClick={() => router.push('/promoteur/evenements')}>Voir</button></td></tr>
+              </tbody>
+            </table>
+            <div style={{marginTop:18, fontSize:'1rem', color:'#64748b'}}>Total événements : <b>2</b></div>
+          </div>
+        )}
+        {activeTab === 2 && (
+          <div style={{marginTop: 32}}>
+            <h3 style={{fontSize:'1.35rem', fontWeight:800, marginBottom:20}}>Statistiques détaillées</h3>
+            <div style={{background:'#fff', borderRadius:12, boxShadow:'0 2px 12px rgba(30,41,59,0.07)', padding:'1.5rem 2rem', fontSize:'1.08rem', color:'#374151', marginBottom:18}}>
+              <div>Votes totaux : <b>530</b></div>
+              <div>Participants uniques : <b>200</b></div>
+              <div>Événement le plus populaire : <b>Gala Musique</b></div>
+            </div>
+            <button className={styles.dashboardExportBtn} onClick={() => router.push('/promoteur/statistiques')}>Voir toutes les statistiques</button>
+          </div>
         )}
       </main>
       <Footer />
